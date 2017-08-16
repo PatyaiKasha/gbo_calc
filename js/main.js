@@ -8,6 +8,11 @@ function ress() {
     var probeg_mes = document.getElementById('probeg_mes').value;
     var year = 12;
 
+    if (gbo_price == 0 || benz_price == 0 || gaz_price == 0 || rashod_benz == 0 || probeg_mes == 0) {
+        alert('Не хватает данных для выполнения расчета!');
+    }
+
+
     // Расход газа на 100км.
     var rashod_gaz = rashod_benz * 1.2;
 
@@ -33,7 +38,7 @@ function ress() {
 
     var gbo_res_mes = (gbo_price / km) / probeg_mes;
 
-
+    console.log(gbo_price);
     console.log(rashod_gaz);
     console.log(b);
     console.log(g);
